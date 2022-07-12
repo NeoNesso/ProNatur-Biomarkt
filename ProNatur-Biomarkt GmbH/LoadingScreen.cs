@@ -29,7 +29,7 @@ namespace ProNatur_Biomarkt_GmbH
         {
             loadingBarValue += 1;
 
-            lblLoadingProgress.Text = loadingBarValue.ToString() + " %";
+            lblLoadingProgress.Text = loadingBarValue.ToString() + " $$";
             loadingProgressbar.Value = loadingBarValue;
 
             if (loadingBarValue >= loadingProgressbar.Maximum)
