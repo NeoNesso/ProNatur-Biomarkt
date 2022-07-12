@@ -44,7 +44,6 @@
             this.loadingProgressbar.Name = "loadingProgressbar";
             this.loadingProgressbar.Size = new System.Drawing.Size(660, 23);
             this.loadingProgressbar.TabIndex = 0;
-            this.loadingProgressbar.Value = 75;
             this.loadingProgressbar.Click += new System.EventHandler(this.loadingProgressbar_Click);
             // 
             // label1

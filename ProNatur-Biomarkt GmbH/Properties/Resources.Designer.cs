@@ -63,9 +63,39 @@ namespace ProNatur_Biomarkt_GmbH.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap BtnImgBill {
+            get {
+                object obj = ResourceManager.GetObject("BtnImgBill", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap BtnImgProducts {
+            get {
+                object obj = ResourceManager.GetObject("BtnImgProducts", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap GroceryImg {
             get {
                 object obj = ResourceManager.GetObject("GroceryImg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ImgBgProducts {
+            get {
+                object obj = ResourceManager.GetObject("ImgBgProducts", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
