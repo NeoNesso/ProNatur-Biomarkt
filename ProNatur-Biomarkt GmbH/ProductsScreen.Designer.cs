@@ -129,6 +129,7 @@
             // 
             this.comboBoxProductCategory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.comboBoxProductCategory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBoxProductCategory.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.comboBoxProductCategory.FormattingEnabled = true;
             this.comboBoxProductCategory.Items.AddRange(new object[] {
             "Obst",

@@ -21,6 +21,11 @@ namespace ProNatur_Biomarkt_GmbH
             InitializeComponent();
 
             // Start
+            ShowProducts();
+        }
+
+        private void ShowProducts()
+        {
             sqlConnection.Open();
 
             string query = "select * from Products";
@@ -37,22 +42,54 @@ namespace ProNatur_Biomarkt_GmbH
 
         private void btnProductSave_Click(object sender, EventArgs e)
         {
+            if (textBoxProductName.Text == null 
+                || textBoxProductBrand.Text == null
+                || comboBoxProductCategory.Text == null
+                || textBoxProductPrice.Text == null)
+            {
+                MessageBox.Show("Bitte fülle alle Werte aus!");
+                return;
+            }
+
             string productName = textBoxProductName.Text;
+            string productBrand = textBoxProductBrand.Text;
+            string productCategory = comboBoxProductCategory.Text;
+            string productPrice = textBoxProductPrice.Text;
+
+            sqlConnection.Open();
+
+            string query = string.Format("insert into Products values('{0}','{1}','{2}','{3}')", productName, productBrand, productCategory, productPrice);
+            SqlCommand sqlCommand = new SqlCommand(query, sqlConnection);
+            sqlCommand.ExecuteNonQuery();
+
+            sqlConnection.Close();
+
+            ClearAllFields();
+            ShowProducts();
         }
 
         private void btnProductEdit_Click(object sender, EventArgs e)
         {
-
+            ShowProducts();
         }
 
         private void btnProductClear_Click(object sender, EventArgs e)
         {
-
+            ClearAllFields();
         }
-
         private void btnProductDelete_Click(object sender, EventArgs e)
         {
-
+            ShowProducts();
         }
+
+        private void ClearAllFields()
+        {
+            textBoxProductBrand.Text = String.Empty;
+            textBoxProductName.Text = String.Empty;
+            textBoxProductPrice.Text = String.Empty;
+            comboBoxProductCategory.Text = String.Empty;
+            comboBoxProductCategory.SelectedItem = null;
+        }
+
     }
 }
