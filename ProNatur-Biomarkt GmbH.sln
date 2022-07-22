@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProNatur-Biomarkt GmbH", "P
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExceptionHandling", "ExceptionHandling\ExceptionHandling.csproj", "{3C1FE771-3EEE-44AA-B257-31531CEF90F8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OPP_Beispiel", "OPP_Beispiel\OPP_Beispiel.csproj", "{51792D96-F805-4A89-B8E1-AB46BCA417E4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{3C1FE771-3EEE-44AA-B257-31531CEF90F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3C1FE771-3EEE-44AA-B257-31531CEF90F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3C1FE771-3EEE-44AA-B257-31531CEF90F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51792D96-F805-4A89-B8E1-AB46BCA417E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51792D96-F805-4A89-B8E1-AB46BCA417E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51792D96-F805-4A89-B8E1-AB46BCA417E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51792D96-F805-4A89-B8E1-AB46BCA417E4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
