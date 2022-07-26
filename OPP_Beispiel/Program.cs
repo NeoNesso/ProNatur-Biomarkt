@@ -1,8 +1,9 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
 using OPP_Beispiel;
+using System.Collections.Generic;
 
-Console.WriteLine("Hello, World!");
+List<Vehicle> vehicles = new List<Vehicle>(); 
 
 Car car = new Car()
 {
@@ -11,8 +12,6 @@ Car car = new Car()
     BreakSpeed =   500,
     Speed = 200,
 };
-
-car.LogInformation();
 
 Plane plane = new Plane()
 {
@@ -23,4 +22,53 @@ Plane plane = new Plane()
     HasJetDrive = true
 };
 
-plane.LogInformation();
+Mototcycle mototcycle = new Mototcycle()
+{ Acceleration = 250, BreakSpeed = 25, DoorCount = 0, Speed = 350 };
+
+Helicopter helicopter = new Helicopter()
+{ Acceleration = 200, BreakSpeed = 200, DoorCount = 0, Speed = 150 };
+
+vehicles.Add(car);
+vehicles.Add(plane);
+vehicles.Add(mototcycle);
+vehicles.Add(helicopter);
+
+Console.WriteLine("Welches Fahrzeug möchtest du fahren?");
+var Userinput = Console.ReadLine();
+
+foreach (Vehicle vehicle in vehicles)
+{
+    if (vehicle.GetType().Name == Userinput)
+    {
+        Console.WriteLine("Fahrzeug gefunden: " + Userinput);
+
+        vehicle.LogInformation();
+
+        if (Userinput == nameof(Car))
+        {
+            Car myCar = vehicle as Car;
+            myCar.Move();
+        }
+        else if (Userinput == nameof(Plane))
+        {
+            Plane myPlane = vehicle as Plane;
+            myPlane.Move();
+        }
+        else if (Userinput == nameof(Mototcycle))
+        {
+            Mototcycle myMoto = vehicle as Mototcycle;
+            myMoto.Move();
+        }
+        else if (Userinput == nameof(Helicopter))
+        {
+            Helicopter myHelicopter = vehicle as Helicopter;
+            myHelicopter.Move();
+        }
+        else
+        {
+            Console.WriteLine("Dieses Fahrzeug steht nicht bereit.");
+        }
+
+        break;
+    }
+}
